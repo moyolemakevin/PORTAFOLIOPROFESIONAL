@@ -30,16 +30,16 @@
       </nav>
       <div class="hero-content">
         <div class="hero-text">
-          <p class="hero-intro">Ingeniero de Software</p>
+          <p class="hero-intro">Ingeniero de Software · Desarrollador Full Stack</p>
           <h1>
             Kevin Adolfo<br />
             <span>Moyolema Peralvo</span>
           </h1>
           <p class="hero-description">
-            Ingeniero de Software con énfasis en arquitectura de aplicaciones,
-            diseño orientado a objetos y automatización de procesos. Me apasiona construir
-            productos escalables, documentados y fáciles de mantener que impacten al usuario
-            final.
+            Ingeniero de Software y desarrollador full stack con énfasis en arquitectura de
+            aplicaciones, diseño orientado a objetos y automatización de procesos. Me apasiona
+            construir experiencias web y mobile escalables, documentadas y fáciles de mantener
+            que impacten al usuario final.
           </p>
           <div class="hero-actions">
             <a class="btn primary" href="mailto:kevinmoyolema13@gmail.com"
@@ -50,13 +50,19 @@
           <div class="hero-badges">
             <span class="badge">Arquitecturas escalables</span>
             <span class="badge">Automatización &amp; datos</span>
-            <span class="badge">Experiencia end-to-end</span>
+            <span class="badge">Experiencias web &amp; mobile</span>
+            <span class="badge">Full Stack Delivery</span>
           </div>
         </div>
         <div class="hero-visual">
           <div class="orb orb-primary"></div>
           <div class="orb orb-secondary"></div>
           <div class="grid-plane"></div>
+          <img
+            class="hero-photo"
+            src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=640&q=80"
+            alt="Retrato de Kevin Moyolema"
+          />
           <div class="hero-card">
             <div class="card-header">
               <p>Ambato, Ecuador</p>
@@ -95,10 +101,10 @@
         </div>
         <div class="section-content">
           <p>
-            Soy ingeniero de software enfocado en construir plataformas robustas que conectan datos,
-            experiencias de usuario y operaciones del negocio. Combino diseño de arquitecturas
-            escalables con documentación clara para acelerar la incorporación de equipos y facilitar
-            el mantenimiento continuo.
+            Soy ingeniero de software y desarrollador full stack enfocado en construir plataformas
+            robustas que conectan datos, experiencias de usuario y operaciones del negocio. Combino
+            diseño de arquitecturas escalables con documentación clara para acelerar la incorporación
+            de equipos y facilitar el mantenimiento continuo.
           </p>
           <p>
             He liderado iniciativas de automatización, analítica y modernización cloud que disminuyen
@@ -116,19 +122,19 @@
         <div class="section-content achievements-content">
           <div class="achievements-grid">
             <article class="achievement-card">
-              <span class="achievement-value">+8</span>
+              <span class="achievement-value" data-prefix="+" data-target="8">+8</span>
               <p>Soluciones digitales diseñadas y desplegadas de principio a fin para pymes, academias y organismos públicos.</p>
             </article>
             <article class="achievement-card">
-              <span class="achievement-value">92%</span>
+              <span class="achievement-value" data-target="92" data-suffix="%">92%</span>
               <p>Satisfacción promedio de stakeholders al reducir tiempos de entrega mediante automatizaciones y flujos CI/CD.</p>
             </article>
             <article class="achievement-card">
-              <span class="achievement-value">40%</span>
+              <span class="achievement-value" data-target="40" data-suffix="%">40%</span>
               <p>Optimización de costos operativos al refactorizar código legado y migrar procesos manuales a servicios cloud.</p>
             </article>
             <article class="achievement-card">
-              <span class="achievement-value">3</span>
+              <span class="achievement-value" data-target="3">3</span>
               <p>Equipos técnicos liderados, promoviendo cultura ágil, code reviews efectivos y documentación viva.</p>
             </article>
           </div>
@@ -149,9 +155,9 @@
                 <span>Ambato · 2023 - Actualidad</span>
               </div>
               <ul class="item-highlights">
-                <li>Diseñé y desplegué productos web y mobile para pymes y startups, desde discovery hasta soporte post-lanzamiento.</li>
-                <li>Implementé pipelines CI/CD en GitHub Actions y contenedores Docker para ciclos de entrega semanales.</li>
-                <li>Orquesté squads ágiles de hasta 5 desarrolladores, alineando roadmap, code reviews y documentación viva.</li>
+                <li>Diseñé y desplegué sitios web, tiendas en línea y apps móviles para clientes independientes, cubriendo discovery, UX y soporte continuo.</li>
+                <li>Implementé soluciones para Automotores Carlos Larrea T. que llevan informes de Power BI a la web, integran chatbots de atención y automatizan respuestas.</li>
+                <li>Orquesté pipelines CI/CD en GitHub Actions con contenedores Docker para entregas semanales y soporte post-lanzamiento.</li>
               </ul>
             </div>
           </article>
@@ -412,14 +418,23 @@
           <h2>Hablemos</h2>
         </div>
         <div class="contact-wrapper">
-          <div class="contact-card">
-            <h3>Información personal</h3>
-            <ul>
-              <li><strong>Fecha de nacimiento:</strong> 4 de junio de 2000</li>
-              <li><strong>Nacionalidad:</strong> Ecuatoriano</li>
-              <li><strong>Estado civil:</strong> Soltero</li>
-            </ul>
-          </div>
+          <article class="contact-card profile-card">
+            <figure>
+              <img
+                src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=640&q=80"
+                alt="Kevin Moyolema"
+              />
+              <figcaption>Currículum de Kevin Moyolema</figcaption>
+            </figure>
+            <div class="profile-card__body">
+              <h3>Información personal</h3>
+              <ul>
+                <li><strong>Fecha de nacimiento:</strong> 4 de junio de 2000</li>
+                <li><strong>Nacionalidad:</strong> Ecuatoriano</li>
+                <li><strong>Estado civil:</strong> Soltero</li>
+              </ul>
+            </div>
+          </article>
           <form class="contact-form" action="mailto:kevinmoyolema13@gmail.com" method="post">
             <div class="form-row">
               <input type="text" name="name" placeholder="Nombre" required />
@@ -445,7 +460,52 @@
     </footer>
 
     <script>
-      document.getElementById("current-year").textContent = new Date().getFullYear();
+      const yearElement = document.getElementById("current-year");
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+      const counters = document.querySelectorAll(".achievement-value[data-target]");
+      if (counters.length) {
+        const easeOutQuad = (t) => t * (2 - t);
+        const animateCounter = (entry) => {
+          const { target } = entry;
+          const finalValue = Number(target.dataset.target || 0);
+          const prefix = target.dataset.prefix || "";
+          const suffix = target.dataset.suffix || "";
+          const duration = 1400;
+          let start = null;
+
+          const step = (timestamp) => {
+            if (!start) start = timestamp;
+            const progress = Math.min((timestamp - start) / duration, 1);
+            const eased = easeOutQuad(progress);
+            const currentValue = Math.floor(eased * finalValue);
+            target.textContent = `${prefix}${currentValue}${suffix}`;
+            if (progress < 1) {
+              requestAnimationFrame(step);
+            } else {
+              target.textContent = `${prefix}${finalValue}${suffix}`;
+            }
+          };
+
+          requestAnimationFrame(step);
+        };
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounter(entry);
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        counters.forEach((counter) => observer.observe(counter));
+      }
     </script>
   </body>
 </html>
