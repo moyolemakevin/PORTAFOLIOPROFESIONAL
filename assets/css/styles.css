@@ -537,115 +537,61 @@ img {
   color: rgba(244, 246, 255, 0.82);
 }
 
-.portfolio-guide .section-content {
-  gap: 28px;
-  background: transparent;
-  border: none;
-  padding: 0;
-  box-shadow: none;
-}
-
-.portfolio-guide .section-content > p {
-  margin: 0;
-  padding: 28px 32px;
+.achievements-content {
   background: linear-gradient(160deg, rgba(12, 16, 38, 0.82), rgba(12, 16, 38, 0.52));
-  border: 1px solid rgba(95, 92, 255, 0.26);
-  border-radius: calc(var(--radius) + 2px);
-  box-shadow: 0 24px 60px -34px rgba(3, 7, 28, 0.9);
-}
-
-.guide-grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.guide-card {
-  background: linear-gradient(160deg, rgba(12, 16, 40, 0.82), rgba(12, 16, 40, 0.52));
   border: 1px solid rgba(95, 92, 255, 0.28);
-  border-radius: calc(var(--radius) - 2px);
-  padding: 26px;
-  box-shadow: 0 22px 50px -36px rgba(2, 7, 36, 0.9);
+  padding: 44px;
+  gap: 32px;
+}
+
+.achievements-grid {
   display: grid;
-  gap: 12px;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.achievement-card {
+  background: radial-gradient(circle at top, rgba(95, 92, 255, 0.22), transparent 70%),
+    linear-gradient(160deg, rgba(11, 15, 40, 0.9), rgba(11, 15, 40, 0.55));
+  border: 1px solid rgba(0, 245, 255, 0.28);
+  border-radius: calc(var(--radius) - 4px);
+  padding: 32px 26px;
+  display: grid;
+  gap: 18px;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
-.guide-card::after {
+.achievement-card::after {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(130deg, rgba(95, 92, 255, 0.22), transparent 45%);
-  opacity: 0.4;
+  border: 1px solid transparent;
+  background: linear-gradient(120deg, rgba(0, 245, 255, 0.45), rgba(255, 106, 241, 0.45)) border-box;
+  opacity: 0.2;
   pointer-events: none;
 }
 
-.guide-card:hover {
-  transform: translateY(-10px) scale(1.01);
-  border-color: rgba(0, 245, 255, 0.4);
+.achievement-card:hover {
+  transform: translateY(-12px) scale(1.01);
+  border-color: rgba(95, 92, 255, 0.5);
+  box-shadow: 0 30px 70px -28px rgba(4, 12, 36, 0.9);
 }
 
-.guide-card h3 {
+.achievement-value {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-shadow: 0 0 22px rgba(0, 245, 255, 0.6);
+  letter-spacing: 0.12em;
+}
+
+.achievement-card p {
   margin: 0;
-  font-size: 1.05rem;
-  color: rgba(244, 246, 255, 0.94);
-  letter-spacing: 0.02em;
-}
-
-.guide-card ul {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-  list-style: none;
-}
-
-.guide-card li {
-  position: relative;
-  padding-left: 18px;
   color: rgba(244, 246, 255, 0.78);
-  line-height: 1.5;
-}
-
-.guide-card li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(120deg, var(--color-secondary), var(--color-tertiary));
-  box-shadow: 0 0 0 4px rgba(0, 245, 255, 0.18);
-}
-
-.guide-best-practices {
-  background: linear-gradient(135deg, rgba(95, 92, 255, 0.26), rgba(0, 245, 255, 0.18));
-  border-radius: calc(var(--radius) + 2px);
-  padding: 32px;
-  border: 1px solid rgba(95, 92, 255, 0.32);
-  display: grid;
-  gap: 18px;
-  box-shadow: 0 24px 60px -34px rgba(4, 11, 36, 0.9);
-}
-
-.guide-best-practices h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.guide-best-practices ul {
-  margin: 0;
-  padding-left: 20px;
-  display: grid;
-  gap: 12px;
-}
-
-.guide-best-practices li {
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .timeline {
@@ -1206,6 +1152,14 @@ textarea::placeholder {
 
   .badge {
     font-size: 0.72rem;
+  }
+
+  .achievements-content {
+    padding: 28px;
+  }
+
+  .achievement-card {
+    padding: 24px 20px;
   }
 }
 
