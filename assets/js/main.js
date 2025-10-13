@@ -1,6 +1,6 @@
 ﻿// Interactividad del portafolio
 // Navegación móvil, secciones activas, reveal, formulario mailto y copiar email
-(function(){  
+(function(){
   const $ = (sel,ctx=document)=>ctx.querySelector(sel);
   const $$ = (sel,ctx=document)=>Array.from(ctx.querySelectorAll(sel));
 
@@ -9,7 +9,6 @@
   const toggle = document.createElement('button');
   toggle.className = 'menu-toggle';
   toggle.setAttribute('aria-label','Abrir menú');
-  
   toggle.innerHTML = '<span></span><span></span><span></span>';
   const navbar = $('.navbar');
   navbar.insertBefore(toggle, nav);

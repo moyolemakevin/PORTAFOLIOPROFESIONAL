@@ -240,6 +240,69 @@ img {
   margin-top: 28px;
 }
 
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+.link-button + .link-button {
+  margin-left: 10px;
+}
+
+.btn.secondary + .link-button {
+  margin-left: 14px;
+}
+
+.link-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -20px rgba(0, 0, 0, 0.8);
+  filter: brightness(1.05);
+}
+
+.link-icon {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.link-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.link-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.link-button--linkedin {
+  background: #0a66c2;
+}
+
+.link-button--whatsapp {
+}
+
+.link-button--email {
+}
+
+.link-button--cv {
+  background: linear-gradient(135deg, #ffb347, #ffcc70);
+}
+
+
 .hero-badges {
   display: flex;
   flex-wrap: wrap;
@@ -312,7 +375,7 @@ img {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 360px;
+  min-height: 400px;
 }
 
 .hero-visual::before {
@@ -379,9 +442,129 @@ img {
   z-index: -3;
 }
 
+.hero-orbit {
+  position: relative;
+  display: grid;
+  place-items: center;
+  --hero-orbit-size: clamp(340px, 44vw, 420px);
+  --orbit-icon-size: clamp(32px, 5.5vw, 52px);
+  --orbit-duration: 22s;
+  width: var(--hero-orbit-size);
+  height: var(--hero-orbit-size);
+  z-index: 2;
+}
+
+.hero-orbit::after {
+  content: "";
+  position: absolute;
+  inset: clamp(48px, 8vw, 64px);
+  border-radius: 50%;
+  border: 1px dashed rgba(95, 92, 255, 0.35);
+  box-shadow: 0 0 24px rgba(0, 245, 255, 0.18);
+  opacity: 0.85;
+  animation: orbit-glow 12s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+.tech-orbit {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 14px 30px rgba(4, 12, 34, 0.4));
+  z-index: 3;
+}
+
+.tech-orbit::after {
+  content: "";
+  position: absolute;
+  inset: clamp(32px, 6vw, 48px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 245, 255, 0.08), rgba(0, 0, 0, 0));
+  z-index: -1;
+}
+
+.orbit-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--orbit-icon-size);
+  height: var(--orbit-icon-size);
+  transform-origin: center;
+  animation: orbit var(--orbit-duration) linear infinite;
+  transform: translate(-50%, -50%)
+    rotate(var(--start))
+    translateX(calc(var(--hero-orbit-size) / 2 - var(--orbit-icon-size) * 0.35));
+}
+
+.orbit-item__spinner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  animation: orbit-counter var(--orbit-duration) linear infinite;
+}
+
+.orbit-icon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 245, 255, 0.22);
+  background: linear-gradient(160deg, rgba(9, 12, 28, 0.92), rgba(9, 12, 28, 0.65));
+  display: grid;
+  place-items: center;
+  padding: clamp(6px, 1.5vw, 10px);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.orbit-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.orbit-icon--react {
+  border-color: rgba(97, 218, 251, 0.5);
+  background: radial-gradient(circle, rgba(19, 28, 48, 0.9), rgba(9, 12, 28, 0.5));
+}
+
+.orbit-icon--node {
+  border-color: rgba(131, 205, 41, 0.45);
+  background: radial-gradient(circle, rgba(16, 27, 19, 0.9), rgba(9, 12, 28, 0.55));
+}
+
+.orbit-icon--github {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: radial-gradient(circle, rgba(14, 17, 26, 0.92), rgba(9, 12, 28, 0.6));
+}
+
+.orbit-icon--angular {
+  border-color: rgba(221, 0, 49, 0.5);
+  background: radial-gradient(circle, rgba(38, 10, 20, 0.9), rgba(9, 12, 28, 0.55));
+}
+
+.orbit-icon--typescript {
+  border-color: rgba(47, 116, 192, 0.45);
+  background: radial-gradient(circle, rgba(18, 28, 48, 0.9), rgba(9, 12, 28, 0.55));
+}
+
+.orbit-icon--python {
+  border-color: rgba(55, 118, 171, 0.5);
+  background: radial-gradient(circle, rgba(18, 30, 46, 0.94), rgba(9, 12, 28, 0.55));
+}
+
+.orbit-icon--docker {
+  border-color: rgba(13, 183, 237, 0.48);
+  background: radial-gradient(circle, rgba(11, 26, 42, 0.95), rgba(9, 12, 28, 0.55));
+}
+
+.orbit-icon svg text {
+  dominant-baseline: middle;
+}
+
 .hero-photo {
-  width: clamp(220px, 28vw, 280px);
-  height: clamp(220px, 28vw, 280px);
+  width: clamp(220px, 26vw, 280px);
+  height: clamp(220px, 26vw, 280px);
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid rgba(95, 92, 255, 0.4);
@@ -1107,6 +1290,42 @@ textarea::placeholder {
   }
 }
 
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%)
+      rotate(var(--start))
+      translateX(calc(var(--hero-orbit-size) / 2 - var(--orbit-icon-size) * 0.7));
+  }
+  100% {
+    transform: translate(-50%, -50%)
+      rotate(calc(var(--start) + 360deg))
+      translateX(calc(var(--hero-orbit-size) / 2 - var(--orbit-icon-size) * 0.7));
+  }
+}
+
+@keyframes orbit-counter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes orbit-glow {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.68;
+    transform: scale(1.04);
+  }
+}
+
 @keyframes float {
   0%,
   100% {
@@ -1178,7 +1397,21 @@ textarea::placeholder {
   }
 
   .hero-visual {
-    min-height: 280px;
+    min-height: 330px;
+  }
+
+  .hero-orbit {
+    --hero-orbit-size: clamp(260px, 82vw, 320px);
+    --orbit-icon-size: clamp(26px, 9vw, 40px);
+    --orbit-duration: 18s;
+  }
+
+  .hero-orbit::after {
+    inset: clamp(32px, 10vw, 48px);
+  }
+
+  .tech-orbit::after {
+    inset: clamp(24px, 8vw, 36px);
   }
 
   .hero-card {
