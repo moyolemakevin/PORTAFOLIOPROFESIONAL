@@ -30,7 +30,11 @@
       </nav>
       <div class="hero-content">
         <div class="hero-text">
-          <p class="hero-intro">Ingeniero de Software · Desarrollador Full Stack</p>
+          <p class="hero-intro">
+            <span class="typewriter" data-typewriter data-typewriter-speed="55"
+              >Ingeniero de Software · Desarrollador Full Stack</span
+            >
+          </p>
           <h1>
             Kevin Adolfo<br />
             <span>Moyolema Peralvo</span>
@@ -683,6 +687,62 @@
         );
 
         counters.forEach((counter) => observer.observe(counter));
+      }
+
+      const typewriterElements = document.querySelectorAll("[data-typewriter]");
+      if (typewriterElements.length) {
+        const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        typewriterElements.forEach((element) => {
+          const content = element.textContent.trim();
+          element.dataset.typewriterContent = content;
+          element.textContent = content;
+        });
+
+        if (prefersReduced || !("IntersectionObserver" in window)) {
+          typewriterElements.forEach((element) => {
+            element.classList.add("typewriter-complete");
+          });
+        } else {
+          const typewriterObserver = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                  return;
+                }
+
+                const element = entry.target;
+                obs.unobserve(element);
+
+                const text = element.dataset.typewriterContent || "";
+                if (!text) {
+                  return;
+                }
+
+                const letters = Array.from(text);
+                const speed = Number(element.dataset.typewriterSpeed) || 50;
+                element.textContent = "";
+                element.classList.add("typewriter-active");
+
+                let index = 0;
+                const typeNext = () => {
+                  if (index < letters.length) {
+                    element.textContent += letters[index];
+                    index += 1;
+                    setTimeout(typeNext, speed);
+                  } else {
+                    element.classList.add("typewriter-complete");
+                  }
+                };
+
+                typeNext();
+              });
+            },
+            { threshold: 0.7 }
+          );
+
+          typewriterElements.forEach((element) => typewriterObserver.observe(element));
+        }
       }
     </script>
   </body>
