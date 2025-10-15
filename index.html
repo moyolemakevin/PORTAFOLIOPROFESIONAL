@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header class="hero" id="inicio">
       <nav class="navbar">
         <span class="brand">Kevin Moyolema</span>
@@ -30,18 +31,22 @@
       </nav>
       <div class="hero-content">
         <div class="hero-text">
-          <p class="hero-intro">Ingeniero de Software · Desarrollador Full Stack</p>
-          <h1>
+          <p class="hero-intro" data-reveal data-reveal-delay="80">
+            <span class="typewriter" data-typewriter data-typewriter-speed="55"
+              >Ingeniero de Software · Desarrollador Full Stack</span
+            >
+          </p>
+          <h1 data-reveal data-reveal-delay="140">
             Kevin Adolfo<br />
             <span>Moyolema Peralvo</span>
           </h1>
-          <p class="hero-description">
+          <p class="hero-description" data-reveal data-reveal-delay="220">
             Ingeniero de Software y desarrollador full stack con énfasis en arquitectura de
             aplicaciones, diseño orientado a objetos y automatización de procesos. Me apasiona
             construir experiencias web y mobile escalables, documentadas y fáciles de mantener
             que impacten al usuario final.
           </p>
-          <div class="hero-actions">
+          <div class="hero-actions" data-reveal data-reveal-delay="320">
             <a class="btn primary" href="mailto:kevinmoyolema13@gmail.com"
               >Contactar</a
             >
@@ -110,14 +115,15 @@
               </span>
             </a>
           </div>
-          <div class="hero-badges">
+          <div class="hero-badges" data-reveal data-reveal-delay="420">
             <span class="badge">Arquitecturas escalables</span>
             <span class="badge">Automatización &amp; datos</span>
             <span class="badge">Experiencias web &amp; mobile</span>
             <span class="badge">Full Stack Delivery</span>
           </div>
         </div>
-        <div class="hero-visual">
+        <div class="hero-visual" data-parallax data-parallax-depth="18" data-reveal="fade-in"
+          data-reveal-delay="200">
           <div class="orb orb-primary"></div>
           <div class="orb orb-secondary"></div>
           <div class="grid-plane"></div>
@@ -292,7 +298,8 @@
               </span>
             </div>
           </div>
-          <div class="hero-card">
+          <div class="hero-card" data-parallax data-parallax-depth="26" data-reveal="fade-up"
+            data-reveal-delay="320">
             <div class="card-header">
               <p>Ambato, Ecuador</p>
               <span class="status">Disponible</span>
@@ -320,11 +327,11 @@
 
     <main>
       <section class="section about" id="sobre-mi">
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <span>Sobre mí</span>
           <h2>Perfil Profesional</h2>
         </div>
-        <div class="section-content">
+        <div class="section-content" data-reveal="fade-up" data-reveal-delay="120">
           <p>
             Soy ingeniero de software y desarrollador full stack enfocado en construir plataformas
             robustas que conectan datos, experiencias de usuario y operaciones del negocio. Combino
@@ -338,25 +345,25 @@
       </section>
 
       <section class="section achievements" id="logros">
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <span>Logros</span>
           <h2>Impacto en Números</h2>
         </div>
-        <div class="section-content achievements-content">
+        <div class="section-content achievements-content" data-reveal="fade-up" data-reveal-delay="120">
           <div class="achievements-grid">
-            <article class="achievement-card">
+            <article class="achievement-card" data-reveal data-reveal-delay="80">
               <span class="achievement-value" data-prefix="+" data-target="8">+8</span>
               <p>Soluciones digitales diseñadas y desplegadas de principio a fin para pymes, academias y organismos públicos.</p>
             </article>
-            <article class="achievement-card">
+            <article class="achievement-card" data-reveal data-reveal-delay="160">
               <span class="achievement-value" data-target="92" data-suffix="%">92%</span>
               <p>Satisfacción promedio de stakeholders al reducir tiempos de entrega mediante automatizaciones y flujos CI/CD.</p>
             </article>
-            <article class="achievement-card">
+            <article class="achievement-card" data-reveal data-reveal-delay="240">
               <span class="achievement-value" data-target="40" data-suffix="%">40%</span>
               <p>Optimización de costos operativos al refactorizar código legado y migrar procesos manuales a servicios cloud.</p>
             </article>
-            <article class="achievement-card">
+            <article class="achievement-card" data-reveal data-reveal-delay="320">
               <span class="achievement-value" data-target="3">3</span>
               <p>Equipos técnicos liderados, promoviendo cultura ágil, code reviews efectivos y documentación viva.</p>
             </article>
@@ -365,12 +372,12 @@
       </section>
 
       <section class="section experience" id="experiencia">
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <span>Experiencia</span>
           <h2>Trayectoria Destacada</h2>
         </div>
-        <div class="timeline">
-          <article class="timeline-item">
+        <div class="timeline" data-reveal="fade-up" data-reveal-delay="120">
+          <article class="timeline-item" data-reveal data-reveal-delay="120">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-header">
@@ -384,7 +391,7 @@
               </ul>
             </div>
           </article>
-          <article class="timeline-item">
+          <article class="timeline-item" data-reveal data-reveal-delay="220">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-header">
@@ -402,12 +409,12 @@
       </section>
 
       <section class="section projects" id="proyectos">
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <span>Proyectos</span>
           <h2>Casos de Éxito Seleccionados</h2>
         </div>
         <div class="projects-grid">
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="100">
             <div class="project-header">
               <h3>Portal Financiero Integrado con Power BI</h3>
               <span>Node.js · Next.js · Power BI Embedded</span>
@@ -421,7 +428,7 @@
               <li>Automatice alertas y envios de reportes PDF usando Azure Functions y colas Storage, reduciendo un 60% el tiempo de distribucion.</li>
             </ul>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="200">
             <div class="project-header">
               <h3>Suite Web & Mobile para Aceites Esenciales</h3>
               <span>Flutter · React · FastAPI · Azure AI</span>
@@ -435,7 +442,7 @@
               <li>Implemente pipelines CI/CD en GitHub Actions con despliegues automatizados a Firebase Hosting y Azure App Service.</li>
             </ul>
           </article>
-          <article class="project-card">
+          <article class="project-card" data-reveal data-reveal-delay="300">
             <div class="project-header">
               <h3>Bot Automatizado de Control de Datos</h3>
               <span>Python · Power Automate · Azure Monitor</span>
@@ -453,12 +460,12 @@
       </section>
 
       <section class="section stack" id="stack">
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <span>Stack</span>
           <h2>Tecnologías de Confianza</h2>
         </div>
         <div class="stack-grid">
-          <article class="stack-card">
+          <article class="stack-card" data-reveal data-reveal-delay="80">
             <h3>Backend</h3>
             <ul>
               <li>Java · Spring Boot · Maven</li>
@@ -468,7 +475,7 @@
               <li>C# · .NET 6 · Azure Functions</li>
             </ul>
           </article>
-          <article class="stack-card">
+          <article class="stack-card" data-reveal data-reveal-delay="160">
             <h3>Frontend & UX</h3>
             <ul>
               <li>HTML5 · CSS3 · JavaScript ES6+</li>
@@ -478,7 +485,7 @@
               <li>Flutter · PWAs · Integración con APIs</li>
             </ul>
           </article>
-          <article class="stack-card">
+          <article class="stack-card" data-reveal data-reveal-delay="240">
             <h3>Datos</h3>
             <ul>
               <li>MySQL · PostgreSQL · SQL Server</li>
@@ -486,7 +493,7 @@
               <li>Power BI · Excel Avanzado · ETL en Python</li>
             </ul>
           </article>
-          <article class="stack-card">
+          <article class="stack-card" data-reveal data-reveal-delay="320">
             <h3>DevOps & Calidad</h3>
             <ul>
               <li>Git · GitHub · GitLab CI/CD</li>
@@ -498,12 +505,12 @@
       </section>
 
       <section class="section skills" id="habilidades">
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <span>Habilidades</span>
           <h2>Fortalezas Técnicas y Blandas</h2>
         </div>
         <div class="cards-grid">
-          <article class="card">
+          <article class="card" data-reveal data-reveal-delay="80">
             <h3>Lenguajes y Desarrollo</h3>
             <ul>
               <li>Programación en Java y C++</li>
@@ -511,7 +518,7 @@
               <li>Buenas prácticas de patrones y arquitectura</li>
             </ul>
           </article>
-          <article class="card">
+          <article class="card" data-reveal data-reveal-delay="160">
             <h3>Datos y Sistemas</h3>
             <ul>
               <li>Gestión básica de bases de datos</li>
@@ -519,7 +526,7 @@
               <li>Monitoreo y soporte técnico integral</li>
             </ul>
           </article>
-          <article class="card">
+          <article class="card" data-reveal data-reveal-delay="240">
             <h3>Herramientas Digitales</h3>
             <ul>
               <li>Dominio avanzado del paquete Microsoft Office</li>
@@ -527,7 +534,7 @@
               <li>Automatización de reportes y análisis</li>
             </ul>
           </article>
-          <article class="card">
+          <article class="card" data-reveal data-reveal-delay="320">
             <h3>Competencias Profesionales</h3>
             <ul>
               <li>Comunicación clara y efectiva</li>
@@ -539,12 +546,12 @@
       </section>
 
       <section class="section education" id="educacion">
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <span>Educación</span>
           <h2>Formación Académica</h2>
         </div>
-        <div class="timeline compact">
-          <article class="timeline-item">
+        <div class="timeline compact" data-reveal="fade-up" data-reveal-delay="120">
+          <article class="timeline-item" data-reveal data-reveal-delay="140">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
               <div class="timeline-header">
@@ -558,32 +565,32 @@
       </section>
 
       <section class="section courses" id="cursos">
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <span>Cursos</span>
           <h2>Certificaciones y Formación Complementaria</h2>
         </div>
         <div class="courses-grid">
-          <article class="course-card">
+          <article class="course-card" data-reveal data-reveal-delay="80">
             <h3>Programming Essentials in C++</h3>
             <p>Cisco Networking Academy · Sep. 2024</p>
           </article>
-          <article class="course-card">
+          <article class="course-card" data-reveal data-reveal-delay="140">
             <h3>Get Connected</h3>
             <p>Cisco Networking Academy · Sep. 2024</p>
           </article>
-          <article class="course-card">
+          <article class="course-card" data-reveal data-reveal-delay="200">
             <h3>Curso de Java</h3>
             <p>Ademass · Jun. 2024</p>
           </article>
-          <article class="course-card">
+          <article class="course-card" data-reveal data-reveal-delay="260">
             <h3>Comunicación Digital y Políticas Públicas</h3>
             <p>GAD Municipalidad de Ambato · Nov. 2022</p>
           </article>
-          <article class="course-card">
+          <article class="course-card" data-reveal data-reveal-delay="320">
             <h3>Herramientas Básicas para una Gestión Pública Eficiente</h3>
             <p>Escuela de Desarrollo Social y Empresarial UTP · Nov. 2022</p>
           </article>
-          <article class="course-card">
+          <article class="course-card" data-reveal data-reveal-delay="380">
             <h3>Liderazgo Político Público</h3>
             <p>Escuela de Desarrollo Social y Empresarial UTP · Abr. 2022</p>
           </article>
@@ -591,12 +598,12 @@
       </section>
 
       <section class="section contact" id="contacto">
-        <div class="section-title">
+        <div class="section-title" data-reveal>
           <span>Contacto</span>
           <h2>Hablemos</h2>
         </div>
         <div class="contact-wrapper">
-          <article class="contact-card profile-card">
+          <article class="contact-card profile-card" data-reveal data-reveal-delay="120">
             <figure>
               <img
                 src="assets/img/kevin.jpeg"
@@ -613,7 +620,7 @@
               </ul>
             </div>
           </article>
-          <form class="contact-form" action="mailto:kevinmoyolema13@gmail.com" method="post">
+          <form class="contact-form" action="mailto:kevinmoyolema13@gmail.com" method="post" data-reveal data-reveal-delay="200">
             <div class="form-row">
               <input type="text" name="name" placeholder="Nombre" required />
               <input type="email" name="email" placeholder="Correo electrónico" required />
@@ -638,6 +645,20 @@
     </footer>
 
     <script>
+      const progressElement = document.querySelector(".scroll-progress");
+      if (progressElement) {
+        const updateProgress = () => {
+          const doc = document.documentElement;
+          const scrollable = doc.scrollHeight - window.innerHeight;
+          const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+          progressElement.style.setProperty("--progress", `${progress}%`);
+        };
+
+        updateProgress();
+        window.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress);
+      }
+
       const yearElement = document.getElementById("current-year");
       if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
@@ -683,6 +704,142 @@
         );
 
         counters.forEach((counter) => observer.observe(counter));
+      }
+
+      const revealElements = document.querySelectorAll("[data-reveal]");
+      if (revealElements.length) {
+        const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const prefersReducedMotion = motionQuery.matches;
+
+        const revealImmediately = (ignoreDelay = false) => {
+          revealElements.forEach((element) => {
+            const delay = Number(element.dataset.revealDelay || 0);
+            if (delay && !ignoreDelay) {
+              setTimeout(() => element.classList.add("is-visible"), delay);
+            } else {
+              element.classList.add("is-visible");
+            }
+          });
+        };
+
+        if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+          revealImmediately(true);
+        } else {
+          const revealObserver = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                  return;
+                }
+
+                const target = entry.target;
+                obs.unobserve(target);
+                const delay = Number(target.dataset.revealDelay || 0);
+                if (delay) {
+                  setTimeout(() => target.classList.add("is-visible"), delay);
+                } else {
+                  target.classList.add("is-visible");
+                }
+              });
+            },
+            { threshold: 0.2, rootMargin: "0px 0px -10% 0px" }
+          );
+
+          revealElements.forEach((element) => revealObserver.observe(element));
+        }
+
+        if (typeof motionQuery.addEventListener === "function") {
+          motionQuery.addEventListener("change", (event) => {
+            if (event.matches) {
+              revealImmediately(true);
+            }
+          });
+        }
+      }
+
+      const heroSection = document.querySelector(".hero");
+      if (heroSection && window.matchMedia("(pointer: fine)").matches) {
+        const parallaxTargets = heroSection.querySelectorAll("[data-parallax]");
+
+        if (parallaxTargets.length) {
+          const applyParallax = (event) => {
+            const rect = heroSection.getBoundingClientRect();
+            const relativeX = (event.clientX - rect.left) / rect.width - 0.5;
+            const relativeY = (event.clientY - rect.top) / rect.height - 0.5;
+
+            parallaxTargets.forEach((element) => {
+              const depth = Number(element.dataset.parallaxDepth || 18);
+              const moveX = relativeX * depth;
+              const moveY = relativeY * -depth;
+              element.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+            });
+          };
+
+          const resetParallax = () => {
+            parallaxTargets.forEach((element) => {
+              element.style.transform = "";
+            });
+          };
+
+          heroSection.addEventListener("pointermove", applyParallax);
+          heroSection.addEventListener("pointerleave", resetParallax);
+        }
+      }
+
+      const typewriterElements = document.querySelectorAll("[data-typewriter]");
+      if (typewriterElements.length) {
+        const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        typewriterElements.forEach((element) => {
+          const content = element.textContent.trim();
+          element.dataset.typewriterContent = content;
+          element.textContent = content;
+        });
+
+        if (prefersReduced || !("IntersectionObserver" in window)) {
+          typewriterElements.forEach((element) => {
+            element.classList.add("typewriter-complete");
+          });
+        } else {
+          const typewriterObserver = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                  return;
+                }
+
+                const element = entry.target;
+                obs.unobserve(element);
+
+                const text = element.dataset.typewriterContent || "";
+                if (!text) {
+                  return;
+                }
+
+                const letters = Array.from(text);
+                const speed = Number(element.dataset.typewriterSpeed) || 50;
+                element.textContent = "";
+                element.classList.add("typewriter-active");
+
+                let index = 0;
+                const typeNext = () => {
+                  if (index < letters.length) {
+                    element.textContent += letters[index];
+                    index += 1;
+                    setTimeout(typeNext, speed);
+                  } else {
+                    element.classList.add("typewriter-complete");
+                  }
+                };
+
+                typeNext();
+              });
+            },
+            { threshold: 0.7 }
+          );
+
+          typewriterElements.forEach((element) => typewriterObserver.observe(element));
+        }
       }
     </script>
   </body>
