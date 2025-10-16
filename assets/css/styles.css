@@ -559,8 +559,8 @@ img {
   --orbit-ring-inset: clamp(28px, 5vw, 40px);
   --orbit-icon-size: clamp(32px, 5.5vw, 52px);
   --orbit-duration: 22s;
-  --orbit-track-size: calc(var(--hero-orbit-size) - var(--orbit-ring-inset) * 1.6);
-  --orbit-radius: calc(var(--orbit-track-size) / 2 + var(--orbit-ring-inset) * 0.1);
+  --orbit-track-size: calc(var(--hero-orbit-size) - var(--orbit-ring-inset) * 2.4);
+  --orbit-radius: calc(var(--hero-orbit-size) / 2 - var(--orbit-ring-inset) * 0.7);
   width: var(--hero-orbit-size);
   height: var(--hero-orbit-size);
   z-index: 2;
@@ -1404,14 +1404,10 @@ textarea::placeholder {
 
 @keyframes orbit {
   0% {
-    transform: translate(-50%, -50%)
-      rotate(var(--start))
-      translateX(calc(var(--hero-orbit-size) / 2 - var(--orbit-icon-size) * 0.7));
+    transform: translate(-50%, -50%) rotate(var(--start)) translateX(var(--orbit-radius));
   }
   100% {
-    transform: translate(-50%, -50%)
-      rotate(calc(var(--start) + 360deg))
-      translateX(calc(var(--hero-orbit-size) / 2 - var(--orbit-icon-size) * 0.7));
+    transform: translate(-50%, -50%) rotate(calc(var(--start) + 360deg)) translateX(var(--orbit-radius));
   }
 }
 
