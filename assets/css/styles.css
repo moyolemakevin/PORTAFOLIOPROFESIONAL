@@ -559,6 +559,8 @@ img {
   --orbit-ring-inset: clamp(28px, 5vw, 40px);
   --orbit-icon-size: clamp(32px, 5.5vw, 52px);
   --orbit-duration: 22s;
+  --orbit-track-size: calc(var(--hero-orbit-size) - var(--orbit-ring-inset) * 1.6);
+  --orbit-radius: calc(var(--orbit-track-size) / 2 + var(--orbit-ring-inset) * 0.1);
   width: var(--hero-orbit-size);
   height: var(--hero-orbit-size);
   z-index: 2;
@@ -585,9 +587,7 @@ img {
   height: var(--orbit-icon-size);
   transform-origin: center;
   animation: orbit var(--orbit-duration) linear infinite;
-  transform: translate(-50%, -50%)
-    rotate(var(--start))
-    translateX(calc(var(--hero-orbit-size) / 2 - var(--orbit-icon-size) * 0.35));
+  transform: translate(-50%, -50%) rotate(var(--start)) translateX(var(--orbit-radius));
 }
 
 .orbit-item__spinner {
@@ -658,8 +658,8 @@ img {
 
 .hero-photo {
   display: block;
-  width: calc(var(--hero-orbit-size) + (var(--orbit-ring-inset) * 0.8));
-  height: calc(var(--hero-orbit-size) + (var(--orbit-ring-inset) * 0.8));
+  width: var(--orbit-track-size);
+  height: var(--orbit-track-size);
   object-fit: cover;
   border-radius: 50%;
   border: none;
